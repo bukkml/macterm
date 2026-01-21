@@ -32,11 +32,6 @@ vim.keymap.set({ 'n' }, '<A-S-l>', '<C-w>L')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- Text moving
---when using these binds you can move a chunk of text and it will automatically indent
-vim.keymap.set('v', 'J', ':m ">+1<CR>gv=gv')
-vim.keymap.set('v', 'K', ':m "<-2<CR>gv=gv')
-
 -- open netrw
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
@@ -74,3 +69,6 @@ vim.keymap.set('n', '<leader><S-Tab>', ':bprev<CR>')
 vim.keymap.set('n', '<leader>T', ':tabnew<CR>')
 vim.keymap.set('n', '<leader>D', ':tabclose<CR>')
 -- vim.keymap.set('n', '<leader><leader><tab>', 'C-
+
+-- Mason
+vim.keymap.set('n', '<leader>m', ':Mason<CR>')

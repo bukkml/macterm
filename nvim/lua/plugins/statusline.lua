@@ -1,4 +1,5 @@
 -- Kunagawa colorscheme
+--[[
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -23,16 +24,16 @@ return {
     })
   end,
 }
+--]]
 
 -- New colorscheme
---[[
 return {
-  "nvim-lualine/lualine.nvim",
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+	"nvim-lualine/lualine.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 
-  config = function()
-    -- Inneficiency speed run fr
-    local custom_auto = require("lualine.themes.auto")
+	config = function()
+		-- Inneficiency speed run fr
+		local custom_auto = require("lualine.themes.auto")
 		custom_auto.normal.c.fg = "#ffffff"
 		custom_auto.insert.c.fg = "#ffffff"
 		custom_auto.visual.c.fg = "#ffffff"
@@ -53,7 +54,7 @@ return {
 		custom_auto.command.a.bg = "#ff4df0"
 		custom_auto.inactive.a.bg = "#9e99ff"
 
-        custom_auto.inactive.a.fg = "#080709"
+		custom_auto.inactive.a.fg = "#080709"
 
 		custom_auto.normal.b.bg = nil
 		custom_auto.normal.c.bg = nil
@@ -67,28 +68,26 @@ return {
 		custom_auto.command.c.bg = nil
 		custom_auto.inactive.b.bg = nil
 		custom_auto.inactive.c.bg = nil
-    
 
 
-    require('lualine').setup({
-      sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'diagnostics' },
-        lualine_c = { 'filename' },
-        lualine_x = { 'searchcount', 'selectioncount', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' }
-      },
-      options = {
-        separator = nil,
-        section_separators = '',
-        component_separators = '',
-        theme = custom_auto,
-      },
-    })
-  end,
+		require("lualine").setup({
+			sections = {
+				lualine_a = { "mode" },
+				lualine_b = { "diagnostics" },
+				lualine_c = { "filename" },
+				lualine_x = { "searchcount", "selectioncount", "fileformat", "filetype" },
+				lualine_y = { "progress" },
+				lualine_z = { "location" },
+			},
+			options = {
+				separator = nil,
+				section_separators = "",
+				component_separators = "",
+				theme = custom_auto,
+			},
+		})
+	end,
 }
---]]
 
 -- Old colorscheme
 --[[

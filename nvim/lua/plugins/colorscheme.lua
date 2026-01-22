@@ -1,10 +1,10 @@
 -- PURPLE COLORSCHEME
--- return {
---   "bukkml/lillilac.nvim",
---   config = function()
---     vim.cmd.colorscheme("lillilac")
---   end,
--- }
+ return {
+   "bukkml/lillilac.nvim",
+   config = function()
+     vim.cmd.colorscheme("lillilac")
+   end,
+ }
 
 
 --[[
@@ -22,6 +22,7 @@ return {
 
 
 -- PAPER COLORSCHEME
+--[[
 return {
   "thesimonho/kanagawa-paper.nvim",
   lazy = false,
@@ -31,3 +32,4 @@ return {
   end,
   opts = {},
 }
+--]]

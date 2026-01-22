@@ -11,7 +11,7 @@ return {
             "Color3",
             "Color4",
             "Color5",
-            "Color6", 
+            "Color6",
         }
 
         local sunflowerDelims = {

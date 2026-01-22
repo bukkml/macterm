@@ -26,6 +26,9 @@ vim.keymap.set({ 'n' }, '<A-S-h>', '<C-w>H')
 vim.keymap.set({ 'n' }, '<A-S-j>', '<C-w>J')
 vim.keymap.set({ 'n' }, '<A-S-k>', '<C-w>K')
 vim.keymap.set({ 'n' }, '<A-S-l>', '<C-w>L')
+-- Split screen
+vim.keymap.set('n', '<leader>vs', ':vsplit<CR>')
+vim.keymap.set('n', '<leader>hs', ':split<CR>')
 
 -- Search
 -- center searches
@@ -72,3 +75,5 @@ vim.keymap.set('n', '<leader>D', ':tabclose<CR>')
 
 -- Mason
 vim.keymap.set('n', '<leader>m', ':Mason<CR>')
+
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})

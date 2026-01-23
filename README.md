@@ -20,10 +20,10 @@ Install and copy kitty and nvim folders to '~/.config/'.
 ## Screenshots
 
 # Kitty screnshot with default colorscheme
-![kitty-screenshot] (./screenshots/kitty.png)
+![kitty-screenshot](screenshots/kitty.png)
 
 # Nvim screenshot with kitty default colorscheme
-![nvim-screenshot] (./screenshots/nvim.png)
+![nvim-screenshot](screenshots/nvim.png)
 
 > [!Tip]
 > Nvim background color change with kitty background color.

@@ -1,10 +1,27 @@
+return {
+    "Mofiqul/dracula.nvim",
+    config = function()
+        require("dracula").setup {
+            colors = {
+                bg = "#181A21",
+                selection = "#212121"
+            }
+        }
+
+        vim.cmd.colorscheme("dracula")
+    end
+}
+
+
 -- PURPLE COLORSCHEME
+--[[
  return {
    "bukkml/lillilac.nvim",
    config = function()
      vim.cmd.colorscheme("lillilac")
    end,
  }
+ --]]
 
 
 --[[

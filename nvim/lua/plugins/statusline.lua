@@ -1,3 +1,120 @@
+return {
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+
+  config = function()
+    local colors = {
+      bg       = "#282a36",
+      fg       = "#f8f8f2",
+      yellow   = "#f1fa8c",
+      cyan     = "#8be9fd",
+      green    = "#50fa7b",
+      orange   = "#ffb86c",
+      violet   = "#bd93f9",
+      magenta  = "#ff79c6",
+      blue     = "#6272a4",
+      red      = "#ff5555",
+      comment  = "#6272a4",
+    }
+
+    local dracula_lualine = {
+      normal = {
+        a = { bg = "#db93f9", fg = colors.bg, gui = "bold" },
+        b = { bg = colors.comment, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+
+      insert = {
+        a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+      },
+
+      visual = {
+        a = { bg = colors.magenta, fg = colors.bg, gui = "bold" },
+      },
+
+      replace = {
+        a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+      },
+
+      inactive = {
+        a = { bg = colors.bg, fg = colors.comment },
+        b = { bg = colors.bg, fg = colors.comment },
+        c = { bg = colors.bg, fg = colors.comment },
+      },
+    }
+
+    local function diff_source()
+      local gitsigns = vim.b.gitsigns_status_dict
+      if gitsigns then
+        return {
+          added = gitsigns.added,
+          modified = gitsigns.changed,
+          removed = gitsigns.removed,
+        }
+      end
+    end
+
+    require("lualine").setup({
+      options = {
+        theme = dracula_lualine,
+        section_separators = "",
+        component_separators = "",
+        globalstatus = true,
+      },
+
+      sections = {
+        lualine_a = {
+          {
+            "mode",
+            fmt = function(str)
+              return str:upper()
+            end,
+          },
+        },
+
+        lualine_b = {
+          {
+            "diff",
+            source = diff_source,
+            symbols = { added = "+", modified = "~", removed = "-" },
+          },
+        },
+
+        lualine_c = {
+          {
+            "branch",
+            icon = "",
+          },
+          {
+            "filename",
+            path = 1,
+            symbols = {
+              modified = "[+]",
+              readonly = "[-]",
+              unnamed = "[No Name]",
+            },
+          },
+        },
+
+        lualine_x = {
+          "filetype",
+          "encoding",
+          "fileformat",
+        },
+
+        lualine_y = {
+          "progress",
+        },
+
+        lualine_z = {
+          "location",
+        },
+      },
+    })
+  end,
+}
+
+
 -- Kunagawa colorscheme
 --[[
 return {
@@ -27,6 +144,7 @@ return {
 --]]
 
 -- New colorscheme
+--[[
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -88,6 +206,7 @@ return {
 		})
 	end,
 }
+--]]
 
 -- Old colorscheme
 --[[

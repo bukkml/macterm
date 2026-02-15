@@ -1,17 +1,16 @@
 return {
     "Mofiqul/dracula.nvim",
     config = function()
-        require("dracula").setup {
+        require("dracula").setup({
             colors = {
                 bg = "#181A21",
-                selection = "#212121"
-            }
-        }
+                selection = "#212121",
+            },
+        })
 
         vim.cmd.colorscheme("dracula")
-    end
+    end,
 }
-
 
 -- PURPLE COLORSCHEME
 --[[
@@ -22,7 +21,6 @@ return {
    end,
  }
  --]]
-
 
 --[[
 return {
@@ -36,7 +34,6 @@ return {
     end,
 }
 --]]
-
 
 -- PAPER COLORSCHEME
 --[[

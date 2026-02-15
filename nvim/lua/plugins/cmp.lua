@@ -17,12 +17,15 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			--collection of snippets from languages
 			"rafamadriz/friendly-snippets",
+
+			"windwp/nvim-autopairs",
 		},
 	},
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
+			local autopairs = require("nvim-autopairs.completion.cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
 				snippet = {
@@ -63,6 +66,7 @@ return {
 				}),
 				matching = { disallow_symbol_nonprefix_matching = false },
 			})
+			cmp.event:on("confirm_done", autopairs.on_confirm_done())
 		end,
 	},
 }

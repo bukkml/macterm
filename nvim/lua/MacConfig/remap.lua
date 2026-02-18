@@ -69,11 +69,15 @@ vim.keymap.set('n', '<leader><Tab>', ':bnext<CR>')
 vim.keymap.set('n', '<leader><S-Tab>', ':bprev<CR>')
 
 --tabs keybind
-vim.keymap.set('n', '<leader>T', ':tabnew<CR>')
-vim.keymap.set('n', '<leader>D', ':tabclose<CR>')
+vim.keymap.set('n', '<leader>z', ':tabnew<CR>')
+vim.keymap.set('n', '<leader>x', ':tabclose<CR>')
 -- vim.keymap.set('n', '<leader><leader><tab>', 'C-
 
 -- Mason
 vim.keymap.set('n', '<leader>m', ':Mason<CR>')
 
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+
+-- Move screen
+vim.keymap.set('n', '<C-j>', '5<C-e>')
+vim.keymap.set('n', '<C-k>', '5<C-y>')

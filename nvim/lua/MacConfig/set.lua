@@ -138,3 +138,6 @@ vim.diagnostic.config({
   update_in_insert = true,
   severity_sort = true,
 })
+
+vim.o.title = true
+vim.o.titlestring = "%{fnamemodify(expand('%:p'), ':~')}"

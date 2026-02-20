@@ -1,1 +1,1 @@
-require("MacConfig")
+require("core")

@@ -1,0 +1,5 @@
+vim.cmd("set background=dark")
+require("core.lazy")
+require("core.remap")
+require("core.set")
+require("lsp-configuration")

@@ -107,10 +107,6 @@ return {
 
         lualine_c = {
             {
-                root_dir(),
-                separator = "┃",
-            },
-            {
               function()
                 local MiniIcons = require("mini.icons")
                 local ft = vim.bo.filetype
@@ -129,6 +125,14 @@ return {
               unnamed = "[No Name]",
             },
           },
+    },
+
+        lualine_x = {
+          "encoding",
+          "fileformat",
+        },
+
+        lualine_y = {
           {
               "diagnostics",
               symbols = {
@@ -138,15 +142,6 @@ return {
                   info = " ",
           },
         },
-    },
-
-        lualine_x = {
-          "encoding",
-          "fileformat",
-        },
-
-        lualine_y = {
-          "progress",
         },
 
         lualine_z = {

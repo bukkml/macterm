@@ -72,7 +72,7 @@ return {
 
         require("lualine").setup({
             options = {
-                theme = dracula_lualine,
+                theme = auto, --dracula_lualine,
                 section_separators = "",
                 component_separators = "",
                 globalstatus = false,

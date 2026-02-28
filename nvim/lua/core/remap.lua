@@ -76,7 +76,7 @@ vim.keymap.set('n', '<leader>x', ':tabclose<CR>')
 -- Mason
 vim.keymap.set('n', '<leader>m', ':Mason<CR>')
 
-vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {desc = "Format file" })
 
 -- Move screen
 vim.keymap.set('n', '<C-j>', '5<C-e>')

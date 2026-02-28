@@ -2,9 +2,11 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
-        -- Your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
+        preset = "helix",
+        spec = {
+            mode = { 'n', 'x' },
+            { "<leader>p", group = "tabs" } --TEST: Test group
+        }
     },
     keys = {
         {

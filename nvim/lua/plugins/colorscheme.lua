@@ -1,14 +1,22 @@
 return {
-    "dracula/vim",
+    "nvim-mini/mini.hues",
     lazy = false,
     config = function()
-        vim.cmd("colorscheme dracula")
-
-        vim.api.nvim_set_hl(0, "Normal", { bg = "#181a21" })
-
-        vim.api.nvim_set_hl(0, "CursorLine", { bg = "#212121" })
-    end,
+        vim.cmd("colorscheme miniwinter")
+    end
 }
+
+-- return {
+--     "dracula/vim",
+--     lazy = false,
+--     config = function()
+--         vim.cmd("colorscheme dracula")
+--
+--         vim.api.nvim_set_hl(0, "Normal", { bg = "#181a21" })
+--
+--         vim.api.nvim_set_hl(0, "CursorLine", { bg = "#212121" })
+--     end,
+-- }
 
 
 -- return {
